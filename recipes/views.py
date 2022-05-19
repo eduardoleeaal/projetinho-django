@@ -1,8 +1,10 @@
-from django.shortcuts import HttpResponse  # , render
+from django.shortcuts import HttpResponse, render
 
 
 def home(request):
-    return HttpResponse('HOME 1')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Eduardo Leal'
+    })
     # return HTTP response
 
 
